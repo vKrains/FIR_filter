@@ -26,4 +26,5 @@ set_property top tb [get_filesets sim_1]
 
 # launch simulation
 launch_simulation
+run 40us
 start_gui
