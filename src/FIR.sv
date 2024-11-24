@@ -41,13 +41,8 @@ module FIR #(
     integer j;
     integer k;
 
-    // logic signed [WIDTH-1:0] coef_reg [TAPS] = '{
-    //     16'd1, 16'd2, 16'd3, 16'd4, 16'd5, 16'd6, 16'd7, 16'd8, 16'd9, 16'd10,
-    //     16'd10, 16'd9, 16'd8, 16'd7, 16'd6, 16'd5, 16'd4, 16'd3, 16'd2, 16'd1
-    // };
-
     initial begin
-        $readmemb(COEFF_FILE, coef_reg); // �������� ������������� �� �����
+        $readmemb(COEFF_FILE, coef_reg); 
         $display("Coefficients loaded:");
         for (int i = 0; i < TAPS; i++) begin
             $display("coef_reg[%0d] = %f", i, coef_reg[i]);
